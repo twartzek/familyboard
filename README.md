@@ -38,21 +38,20 @@ room, and back on automatically as soon as someone walks in.
 ## Architecture
 
 ```mermaid
-%%{init: {"theme": "neutral", "look": "handDrawn"}}%%
 flowchart LR
     subgraph Pi["Raspberry Pi (kiosk mode)"]
-        FE["Frontend\nNext.js :3000"]
-        BE["Backend server\nGo :3006"]
-        SOCK["Socket server\nNode.js :3009"]
-        SYNC["Calendar sync\n(cron, every minute)"]
+        FE["Frontend<br/>Next.js :3000"]
+        BE["Backend server<br/>Go :3006"]
+        SOCK["Socket server<br/>Node.js :3009"]
+        SYNC["Calendar sync<br/>(cron, every minute)"]
         PIR["🚶 PIR sensor"]
     end
 
-    Phone["📱 Phone\n(/mypage)"]
+    Phone["📱 Phone<br/>(/mypage)"]
     HA["🏠 Home Assistant"]
     Tandoor["🍲 Tandoor"]
-    SMB["🖼️ SMB share\n(photos)"]
-    Cal["📅 Google Calendar\n(iCal)"]
+    SMB["🖼️ SMB share<br/>(photos)"]
+    Cal["📅 Google Calendar<br/>(iCal)"]
 
     FE -- "REST" --> BE
     FE -- "socket.io" --> SOCK
