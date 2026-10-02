@@ -1,0 +1,13 @@
+[Unit]
+Description=Start firefox in kiosk mode
+After=network.target syslog.target network.target multi-user.target lightdm.service
+
+[Service]
+ExecStart=/home/admin/familyboard/backend/installation_files/run_kiosk.sh
+Environment=XDG_RUNTIME_DIR=/run/user/1000
+User=admin
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=graphical.target multi-user.target

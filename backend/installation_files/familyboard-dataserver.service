@@ -1,0 +1,13 @@
+[Unit]
+Description=Start imageserver in backend directory
+After=network.target
+
+[Service]
+WorkingDirectory=/home/admin/familyboard/backend/server
+Environment=FAMILYBOARD_CONFIG_FILE=backend-config.raspi.yaml
+ExecStart=/home/admin/familyboard/backend/server/server
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

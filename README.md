@@ -4,7 +4,7 @@
 
 **A self-hosted wall dashboard for your family, running on a Raspberry Pi.**
 
-Calendars · Weather · Meal plan · Photo slideshow · Home Assistant · Household helpers
+Calendars · Weekly weather · Rain radar · Daily quote · Meal plan · Photo slideshow · Home Assistant · Household helpers
 
 [![Go](https://img.shields.io/badge/backend-Go-00ADD8?logo=go&logoColor=white)](backend/server)
 [![Next.js](https://img.shields.io/badge/frontend-Next.js-000000?logo=nextdotjs&logoColor=white)](frontend)
@@ -20,9 +20,12 @@ Calendars · Weather · Meal plan · Photo slideshow · Home Assistant · Househ
 
 Familyboard turns a wall-mounted screen (typically a Raspberry Pi in kiosk
 mode) into a shared family dashboard — everyone's calendars in one place,
-today's weather, what's for dinner (via [Tandoor](https://tandoor.dev/)), a
-rotating photo slideshow from an SMB share, Home Assistant status, and small
-household helpers like a dishwasher turn-tracker. A PIR motion sensor
+the weather forecast for the current week (via
+[weatherwidget.io](https://weatherwidget.io/)), a live rain radar (via
+[Windy](https://www.windy.com/)), a quote of the day, what's for dinner (via
+[Tandoor](https://tandoor.dev/)), a rotating photo slideshow from an SMB
+share, Home Assistant status, and small household helpers like a dishwasher
+turn-tracker. A PIR motion sensor
 attached to the Pi turns the screen off to save power when nobody's in the
 room, and back on automatically as soon as someone walks in.
 
@@ -101,7 +104,7 @@ start to finish:
    below rsyncs the code there instead.
 
    ```bash
-   git clone <this-repo-url> familyboard
+   git clone https://github.com/twartzek/familyboard
    ```
 
 3. **Fill in your configuration on the development machine** — copy the

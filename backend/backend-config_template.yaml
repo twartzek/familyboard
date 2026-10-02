@@ -1,0 +1,97 @@
+backenduser: admin
+uuid: 1a
+calendarsources:
+    - darkcolorcontainer: '#e11265'
+      darkcolormain: '#65082d'
+      darkcoloroncontainer: '#f9e4e9'
+      lightcolorcontainer: '#e1aeff'
+      lightcolormain: '#4B0076'
+      lightcoloroncontainer: '#4B0076'
+      name: Feiertage
+      provider: google
+      type: ical
+      url: https://calendar.google.com/calendar/ical/de.german%23holiday%40group.v.calendar.google.com/public/basic.ics
+    - darkcolorcontainer: '#e9f472'
+      darkcolormain: '#fbfdea'
+      darkcoloroncontainer: '#686d33'
+      lightcolorcontainer: '#c6cdf6'
+      lightcolormain: '#101D6B'
+      lightcoloroncontainer: '#101D6B'
+      name: "1"
+      provider: google
+      type: ical
+      url: ""
+    - darkcolorcontainer: '#469440'
+      darkcolormain: '#1f421d'
+      darkcoloroncontainer: '#e6ede6'
+      lightcolorcontainer: '#c6cdf6'
+      lightcolormain: '#ff028d'
+      lightcoloroncontainer: '#ff028d'
+      name: "2"
+      provider: google
+      type: ical
+      url: ""
+    - darkcolorcontainer: '#636152'
+      darkcolormain: '#2c2b25'
+      darkcoloroncontainer: '#e8e8e7'
+      lightcolorcontainer: '#6693F5'
+      lightcolormain: '#0080FE'
+      lightcoloroncontainer: '#131E3A'
+      name: "3"
+      provider: google
+      type: ical
+      url: ""
+    - darkcolorcontainer: '#c9b475'
+      darkcolormain: '#f5f2ea'
+      darkcoloroncontainer: '#5a5034'
+      lightcolorcontainer: '#c8e0e4'
+      lightcolormain: '#5097A4'
+      lightcoloroncontainer: '#5097A4'
+      name: "4"
+      provider: google
+      type: ical
+      url: ""
+    - darkcolorcontainer: '#9a6a66'
+      darkcolormain: '#452f2e'
+      darkcoloroncontainer: '#eee9e9'
+      lightcolorcontainer: '#9d3a70'
+      lightcolormain: '#873260'
+      lightcoloroncontainer: '#e4b6cf'
+      name: "5"
+      provider: google
+      type: ical
+      url: ""
+# Paths below assume the default install.sh/deliver2raspi.sh layout
+# (/home/admin/familyboard on the Pi). Adjust if running locally for
+# development or using a different user/path.
+calendarspath: /home/admin/familyboard/backend/data/calendars.json
+eventspath: /home/admin/familyboard/backend/data/events.json
+homeassistant:
+    ip: tbd
+    port: "8123"
+    user: familyboard
+    active: true
+logpath: /home/admin/familyboard/backend/logs/
+mainpath: /home/admin/familyboard/
+smbserver:
+    directory: tbd
+    ip: 192.1.1.2
+    name: tbd
+    password: tbd
+    user: tbd
+tandoor:
+    bearertoken: tda_
+    ip: 192.1.1.2
+    port: "3080"
+    active: true
+weather:
+    weatherwidgetio:
+        # Beispiel-Widget; eigenen Code unter https://weatherwidget.io/ für den gewünschten Ort erzeugen
+        htmlcode: |-
+            <a class="weatherwidget-io" href="https://forecast7.com/en/0d0d0/musterstadt/" data-label_1="MUSTERSTADT" data-label_2="WEATHER" data-theme="original" >MUSTERSTADT WEATHER</a>
+            <script>
+            !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+            </script>
+    windy:
+        # Beispiel-URL, lat/lon/location gemäss https://www.windy.com/ auf den eigenen Ort anpassen
+        htmlcode: <iframe width="650" height="450" src="https://embed.windy.com/embed.html?type=map&location=coordinates&metricRain=default&metricTemp=default&metricWind=default&zoom=9&overlay=radar&product=radar&level=surface&lat=0&lon=0" frameborder="0"></iframe>

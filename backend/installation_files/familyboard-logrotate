@@ -1,0 +1,25 @@
+~/familyboard/backend/logs/server.log {
+        rotate 7
+        weekly
+        compress
+        delaycompress
+        missingok   
+       }
+
+
+~/familyboard/backend/logs/buildEventsJson.log {
+        rotate 7
+        weekly
+        compress
+        delaycompress
+        missingok   
+       }
+
+~/familyboard/backend/logs/buildCalendarConfigJson.log {
+        rotate 7
+        weekly
+        compress
+        delaycompress
+        missingok   
+       }
+

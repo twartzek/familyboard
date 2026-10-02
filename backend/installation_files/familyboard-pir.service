@@ -1,0 +1,13 @@
+[Unit]
+Description=Start motion detection with PIR
+After=network.target syslog.target network.target multi-user.target graphical.target
+
+[Service]
+WorkingDirectory=/home/admin/familyboard/backend/utils/pir
+ExecStart=python3 pir.py
+User=admin
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
