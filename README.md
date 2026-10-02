@@ -330,3 +330,7 @@ binaries and the frontend on the Pi, and restarts the systemd services.
 Adjust `PI_USER`/`PI_HOST`/`PI_DIR` at the top of the script if they differ
 from the defaults (`admin`, `familyboard.local`, `/home/admin/familyboard`).
 It requires SSH key access to the Pi.
+
+## License
+
+This project is licensed under the MIT License — see [LICENSE](LICENSE).
